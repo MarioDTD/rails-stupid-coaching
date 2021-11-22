@@ -1,4 +1,12 @@
-<form action="/answer">
-  <input type="text" name="ask">
-  <input type="submit" value="Ask!">
-</form>
+<h1>Stupid Coaching</h1>
+
+<h3><%= @answer %></h3>
+<p>-Mario</p>
+
+<% if @answer.include? "?" %>
+<h3>Silly question, get dressed and go to work!</h3>
+<% elsif @answer == "I am going to work" %>
+<h3>Great!</h3>
+<% else  %>
+<h3>I don't care, get dressed and go to work!</h3>
+<% end %>
